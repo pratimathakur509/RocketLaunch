@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/container"
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+    android:padding="10dp">
+
+<ImageView
+    android:id="@+id/rocketImage_iv"
+    android:layout_width="60dp"
+    android:layout_height="0dp"
+    android:padding="@dimen/top_margin"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:ignore="contentDescription" />
+
+<androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/rocketName_tv"
+    style="@style/TextAppearance.AppCompat.Large"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/top_margin"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@+id/rocketImage_iv"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+<androidx.appcompat.widget.AppCompatTextView
+    android:id="@+id/rocketLaunchDate_tv"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/top_margin"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="@+id/rocketName_tv"
+    app:layout_constraintTop_toBottomOf="@+id/rocketName_tv" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/rocketLaunchSuccess_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_margin"
+        android:text="Success"
+        app:layout_constraintStart_toStartOf="@+id/rocketLaunchDate_tv"
+        app:layout_constraintTop_toBottomOf="@+id/rocketLaunchDate_tv"
+        android:drawableRight="@android:drawable/checkbox_on_background"
+        android:drawablePadding="@dimen/top_margin"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
